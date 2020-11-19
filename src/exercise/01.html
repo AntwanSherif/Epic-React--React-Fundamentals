@@ -23,13 +23,17 @@
     <title>01 - Hello World</title>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
     <script type="module">
-        const container = document.createElement('div');
-        container.classList.add('container');
-        container.innerText = 'Hello World!';
+      const root = document.createElement('div')
+      root.id = 'root'
+      const container = document.createElement('div')
+      container.classList.add('container')
+      container.innerText = 'Hello World!'
+      root.appendChild(container);
+      document.body.append(root);
 
-        document.querySelector('div#root').append(container);
+      // document.querySelector('div#root').append(container);
     </script>
   </body>
 </html>
